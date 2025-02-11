@@ -10,6 +10,7 @@ const PostAPI = () => {
         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
         if (response.ok) {
           const data = await response.json();
+          console.log("Fetched Data:", data);
           setPosts(data); // Store the fetched posts in state
           setStatus("API is working!");
         } else {
@@ -25,6 +26,7 @@ const PostAPI = () => {
 
   return (
     <div>
+        
     </div>
   );
 };
