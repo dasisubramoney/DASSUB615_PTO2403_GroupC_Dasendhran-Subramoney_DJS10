@@ -27,10 +27,17 @@ const PostAPI = () => {
   return (
     <div>
         <h2>API Status</h2>
-        <p>{status}</p>
+        <p style={{ color: "red" }}>{status}</p>
 
 
-        
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              <h3>{post.title}</h3>
+              <p>{post.body}</p>
+            </li>
+          ))}
+        </ul>
         
     </div>
   );
