@@ -28,6 +28,10 @@ const PostAPI = () => {
     <div>
         <h2>API Status</h2>
         <p>{status}</p>
+
+
+        
+        
     </div>
   );
 };
