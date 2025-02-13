@@ -29,15 +29,17 @@ const PostAPI = () => {
         <h2>API Status</h2>
         <p style={{ color: "red" }}>{status}</p>
 
-
+      {posts && posts.length > 0 ?
         <ul>
           {posts.map((post) => (
             <li key={post.id}>
-              <h3>{post.title}</h3>
+              <h3>{post.id} {post.title}</h3>
               <p>{post.body}</p>
             </li>
           ))}
-        </ul>
+        </ul>  : 
+            <p>No posts available.</p>
+        }
         
     </div>
   );
